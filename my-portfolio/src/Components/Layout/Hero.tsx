@@ -1,5 +1,4 @@
 import React from 'react';
-import Stars from './Stars';
 
 const Hero: React.FC = () => {
   // Hourglass layout 
