@@ -57,7 +57,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <p>Designed & Built by Vanessa Taylor</p>
+          <p>Designed & Built by VLT Studio</p>
         </div>
 
       </div>
