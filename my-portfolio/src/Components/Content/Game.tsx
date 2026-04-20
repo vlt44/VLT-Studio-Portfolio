@@ -7,7 +7,8 @@ const Game = () => {
         <p className={classes.title}>Pollo Rico</p>
         <p className={classes.subtitleTight}>Late night. Don’t become takeout.</p>
         <p className={classes.subtitle}>Stop the falling orders from reaching the street.</p>
-        <p className={classes.instructions}>← → Move • Space to shoot</p>
+        <p className={classes.instructions}>← → Move • Space to shoot on desktop</p>
+        <p className={classes.instructions}>Tap ← → and yellow button to shoot on mobile</p>
         <div className={classes.frameWrapper}>
           <iframe
             className={classes.frame}
