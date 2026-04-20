@@ -7,15 +7,24 @@ const Game = () => {
         <p className={classes.subtitle}>Late night. Don’t become takeout.</p>
         <p className={classes.instructions}>Stop the falling orders before they reach the ground.</p>
         <p className={classes.instructions}>← → Move • Space to shoot</p>
-        <div>
-          <iframe src="https://scratch.mit.edu/projects/382209881/embed" width="485" height="402" allowFullScreen></iframe>
+        <div className={classes.frameWrapper}>
+          <iframe
+            className={classes.frame}
+            src="https://scratch.mit.edu/projects/382209881/embed"
+            title="Late night game"
+            allowFullScreen
+          ></iframe>
         </div>
     </div>
   );
 }
 
 const classes = {
-  gameContainer: 'justify-items-center place-self-center justify-self-center place-items-center text-align-center',
+  gameContainer: 'w-full px-4 md:px-6 py-12 flex flex-col items-center text-center',
+
+  frameWrapper: 'relative mt-4 w-full max-w-[485px] overflow-hidden rounded-lg',
+
+  frame: 'h-auto w-full [aspect-ratio:485/402] min-h-[280px] md:min-h-[402px]',
   
   wrapper: "absolute inset-0 flex flex-col items-center justify-center text-center px-6 pointer-events-none",
 
