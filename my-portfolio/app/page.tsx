@@ -6,6 +6,7 @@ import Footer from '../src/Components/Layout/Footer';
 import Hero from '../src/Components/Layout/Hero';
 import ScrollProgress from '../src/Components/Layout/ScrollProgress';
 import Stars from '../src/Components/Layout/Stars';
+import Game from '../src/Components/Content/Game';
 
 export default function Page() {
   return (
@@ -21,6 +22,7 @@ export default function Page() {
         <Stars />
         <Hero />
         <FloatingArea />
+        <Game />
         <Footer />
       </main>
     </div>
