@@ -5,7 +5,7 @@ const Game = () => {
     <div className={classes.gameContainer}>
         <h1 className={classes.title}>Let's Play</h1>
         <p className={classes.title}>Pollo Rico</p>
-        <p className={classes.subtitle}>Late night. Don’t become takeout.</p>
+        <p className={classes.subtitleTight}>Late night. Don’t become takeout.</p>
         <p className={classes.subtitle}>Stop the falling orders from reaching the street.</p>
         <p className={classes.instructions}>← → Move • Space to shoot</p>
         <div className={classes.frameWrapper}>
@@ -41,6 +41,13 @@ const classes = {
     text-white/80
     italic
     mb-6
+  `,
+
+  subtitleTight: `
+    text-lg md:text-xl font-medium
+    text-white/80
+    italic
+    mb-0
   `,
 
   instructions: `
