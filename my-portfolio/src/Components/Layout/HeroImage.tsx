@@ -19,7 +19,7 @@ export default function HeroImage() {
 const classes = {
   layer: `
     pointer-events-none
-    absolute top-0 right-0
+    absolute top-10 left-1/2 -translate-x-1/2
     z-20
     h-[100vw] max-h-[100svh] w-[50vw]
     overflow-hidden
