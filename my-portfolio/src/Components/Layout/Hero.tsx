@@ -7,11 +7,6 @@ const Hero: React.FC = () => {
   const bottomStyle = { clipPath: 'polygon(0 100%, 100% 100%, 50% 50%)' };
   const leftStyle = { clipPath: 'polygon(0 -.5%, 0 100.5%, 50% 50%)' };
 
-  const classes = {
-    sunriseSunsetBackground: 'absolute inset-0 bg-[linear-gradient(90deg,#FFF1E6_0%,#FFD166_14%,#FDBA74_26%,#FB7185_42%,#C084FC_58%,#7C3AED_76%,#312E81_90%,#0B1220_100%)]',
-    heroContainer: 'relative w-full aspect-square overflow-hidden ',
-  };
-
   return (
     <div className={classes.heroContainer}>
       <div style={topStyle} className={classes.sunriseSunsetBackground}>
@@ -24,6 +19,10 @@ const Hero: React.FC = () => {
   );
 };
 
+const classes = {
+  sunriseSunsetBackground: 'absolute inset-0 bg-[linear-gradient(90deg,#FFF1E6_0%,#FFD166_14%,#FDBA74_26%,#FB7185_42%,#C084FC_58%,#7C3AED_76%,#312E81_90%,#0B1220_100%)]',
+  heroContainer: 'relative w-full aspect-square overflow-hidden ',
+};
+
 export default Hero;
 
-// <p>Bridging imagination and implementation</p>
