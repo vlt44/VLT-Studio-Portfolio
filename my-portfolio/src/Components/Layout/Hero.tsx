@@ -9,12 +9,10 @@ const Hero: React.FC = () => {
 
   return (
     <div className={classes.heroContainer}>
-      <div style={topStyle} className={classes.sunriseSunsetBackground}>
-      </div>
-      <div style={rightStyle} className={classes.sunriseSunsetBackground}></div>
+      <div style={topStyle} className={classes.sunriseSunsetBackground} />
+      <div style={rightStyle} className={classes.sunriseSunsetBackground} />
       <div style={leftStyle} className={classes.sunriseSunsetBackground} />
-      <div style={bottomStyle}>
-      </div>
+      <div style={bottomStyle} />
     </div>
   );
 };
