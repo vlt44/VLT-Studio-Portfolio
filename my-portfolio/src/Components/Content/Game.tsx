@@ -3,8 +3,8 @@ import React from "react";
 const Game = () => {
   return (
     <div className={classes.gameContainer}>
-        <h1 className={classes.title}>Let's Play</h1>
-        <p className={classes.title}>Pollo Rico</p>
+        <h1 className={classes.titleTop}>Let's Play</h1>
+        <p className={classes.titleBottom}>Pollo Rico</p>
         <p className={classes.subtitleTight}>Late night. Don’t become takeout.</p>
         <p className={classes.subtitle}>Stop the falling orders from reaching the street.</p>
         <p className={classes.instructions}>← → Move • Space to shoot on desktop</p>
@@ -30,12 +30,9 @@ const classes = {
   
   wrapper: "absolute inset-0 flex flex-col items-center justify-center text-center px-6 pointer-events-none",
 
-  title: `
-    text-4xl md:text-6xl font-black tracking-tight
-    text-white
-    drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]
-    mb-4
-  `,
+  titleTop: "text-7xl font-bold tracking-tight leading-tight sm:text-6xl text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.7)]",
+
+  titleBottom: "text-7xl font-bold tracking-tight leading-tight sm:text-6xl text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.7)] mb-4 -mt-6",
 
   subtitle: `
     text-lg md:text-xl font-medium
