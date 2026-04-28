@@ -1,12 +1,13 @@
 'use client'
 
 import React from 'react';
+import ContactMe from '../src/Components/Layout/ContactMe';
 import FloatingArea from '../src/Components/Layout/FloatingArea';
 import Footer from '../src/Components/Layout/Footer';
+import Game from '../src/Components/Content/Game';
 import Hero from '../src/Components/Layout/Hero';
 import ScrollProgress from '../src/Components/Layout/ScrollProgress';
 import Stars from '../src/Components/Layout/Stars';
-import Game from '../src/Components/Content/Game';
 
 export default function Page() {
   return (
@@ -20,10 +21,17 @@ export default function Page() {
       <ScrollProgress />
       <main className={classes.main}>
         <Stars />
-        <Hero />
-        <FloatingArea />
-        <Game />
-        <Footer />
+        
+        <div className={classes.heroStage}>
+          <Hero />
+        </div>
+
+        <div className={classes.content}>
+          <FloatingArea />
+          <ContactMe />
+          <Game />
+          <Footer />
+        </div>
       </main>
     </div>
   );
@@ -32,5 +40,7 @@ export default function Page() {
 const classes = {
   bannerShell: 'sticky top-0 z-50 bg-black/80 text-white',
   bannerInner: 'px-4 py-2 text-center text-sm',
-  main: 'relative z-10'
+  main: 'relative min-h-screen overflow-x-hidden bg-[#05070d] isolate',
+  heroStage: 'relative w-full aspect-square overflow-visible min-h-[90svh]',
+  content: 'relative z-10'
 };
