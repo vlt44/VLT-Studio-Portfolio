@@ -1,25 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Stars from './Stars';
 
 const Hero: React.FC = () => {
-  // Hourglass layout 
-  const topStyle = { clipPath: 'polygon(0 0, 100% 0, 50% 50%)' };
-  const rightStyle = { clipPath: 'polygon(100% -.5%, 100% 100.5%, 50% 50%)' };
+  const [videoFailed, setVideoFailed] = useState(false);
+  const videoSrc = '/backgroundHero.mp4';
+
   const bottomStyle = { clipPath: 'polygon(0 100%, 100% 100%, 50% 50%)' };
-  const leftStyle = { clipPath: 'polygon(0 -.5%, 0 100.5%, 50% 50%)' };
 
   return (
     <div className={classes.heroContainer}>
-      <div style={topStyle} className={classes.sunriseSunsetBackground} />
-      <div style={rightStyle} className={classes.sunriseSunsetBackground} />
-      <div style={leftStyle} className={classes.sunriseSunsetBackground} />
-      <div style={bottomStyle} />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className={classes.videoBg}
+        src={videoSrc}
+        onError={() => setVideoFailed(true)}
+      >
+        Your browser does not support the video tag.
+      </video>
+
+      {videoFailed && (
+        <div className={classes.videoFallback}>
+          Video unavailable in this browser.
+        </div>
+      )}
+
+      <div style={bottomStyle} className={classes.sunriseSunsetBackground}>
+          <Stars />
+      </div>
     </div>
   );
 };
 
 const classes = {
-  sunriseSunsetBackground: 'absolute inset-0 bg-[linear-gradient(90deg,#FFF1E6_0%,#FFD166_14%,#FDBA74_26%,#FB7185_42%,#C084FC_58%,#7C3AED_76%,#312E81_90%,#0B1220_100%)]',
-  heroContainer: 'relative w-full aspect-square overflow-hidden ',
+  sunriseSunsetBackground:
+    'absolute inset-0',
+
+  heroContainer: 'relative w-full aspect-square overflow-hidden',
+
+  videoBg: `
+    absolute inset-0 z-0 h-full w-full
+    object-cover
+    opacity-80
+    pointer-events-none
+  `,
+
+  videoFallback:
+    'absolute inset-0 z-20 grid place-items-center bg-[radial-gradient(circle_at_20%_20%,#3b82f6_0%,#0f172a_50%,#020617_100%)] text-slate-100 text-sm tracking-wide uppercase',
 };
 
 export default Hero;
