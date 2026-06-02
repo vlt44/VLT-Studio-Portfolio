@@ -14,7 +14,7 @@ export default function Page() {
     <div>
       <div role="status" aria-live="polite" className={classes.bannerShell}>
         <div className={classes.bannerInner}>
-          Website under maintenance. Coming May 2026!
+          Website under maintenance.
         </div>
       </div>
 
@@ -41,6 +41,6 @@ const classes = {
   bannerShell: 'sticky top-0 z-50 bg-black/80 text-white',
   bannerInner: 'px-4 py-2 text-center text-sm',
   main: 'relative min-h-screen overflow-x-hidden bg-[#05070d] isolate',
-  heroStage: 'relative w-full aspect-square overflow-visible min-h-[90svh]',
+  heroStage: 'relative w-full aspect-square overflow-visible min-h-[290svh]',
   content: 'relative z-10'
 };
