@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import ContactMe from '../src/Components/Layout/ContactMe';
+// import ContactMe from '../src/Components/Layout/ContactMe';
 import FloatingArea from '../src/Components/Layout/FloatingArea';
 import Footer from '../src/Components/Layout/Footer';
 import Game from '../src/Components/Content/Game';
@@ -28,7 +28,7 @@ export default function Page() {
 
         <div className={classes.content}>
           <FloatingArea />
-          <ContactMe />
+          {/* <ContactMe /> */}
           <Game />
           <Footer />
         </div>
